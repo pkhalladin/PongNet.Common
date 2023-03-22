@@ -34,6 +34,11 @@ namespace PongNet.Common
             children.Add(child);
         }
 
+        public void Add(RenderableGameComponent child)
+        {
+            AddChild(child);
+        }
+
         public IEnumerator<RenderableGameComponent> GetEnumerator()
         {
             return children.GetEnumerator();
