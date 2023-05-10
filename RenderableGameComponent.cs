@@ -17,11 +17,16 @@ namespace PongNet.Common
         public int Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        public Rectangle Bounds => new Rectangle(X, Y, Width, Height);
-        public RenderableGameComponent Parent => parent;
+		public bool IsVisible { get; set; }
+		public Rectangle Bounds => new Rectangle(X, Y, Width, Height);
+        public virtual RenderableGameComponent Parent => parent;
 
         public virtual void Render(Graphics g)
         {
+            if (!IsVisible)
+            {
+                return;
+            }
 			foreach (var child in this)
 			{
                 child.Render(g);
