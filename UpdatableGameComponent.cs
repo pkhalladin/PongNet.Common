@@ -1,8 +1,6 @@
-﻿using System.Drawing;
-
-namespace PongNet.Common
+﻿namespace PongNet.Common
 {
-    public abstract class UpdatableGameComponent : RenderableGameComponent
+	public abstract class UpdatableGameComponent : RenderableGameComponent
     {
         public virtual void Update(double deltaTime)
         {
