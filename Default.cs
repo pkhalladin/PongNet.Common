@@ -13,11 +13,10 @@ namespace PongNet.Common
 		public static readonly Brush PrimaryColorBrush = new SolidBrush(PrimaryColor);
 		public static readonly Brush SecondaryColorBrush = new SolidBrush(SecondaryColor);
 
-		// game
+        // game
 
-
-		// menu
-		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
+        // menu
+        public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
 		public static readonly string MenuCheckedPrefix = "->";
 	}
 }
