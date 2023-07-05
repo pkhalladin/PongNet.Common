@@ -17,11 +17,6 @@ namespace PongNet.Common
 
 		// menu
 		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
-		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
-		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
-		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
-		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
-		public static readonly Font MenuFont = new Font("Courier New", 15.0f, FontStyle.Bold);
 		public static readonly string MenuCheckedPrefix = "->";
 	}
 }
