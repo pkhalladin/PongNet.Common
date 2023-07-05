@@ -20,6 +20,7 @@ namespace PongNet.Common
 		public bool IsVisible { get; set; }
 		public Rectangle Bounds => new Rectangle(X, Y, Width, Height);
         public virtual RenderableGameComponent Parent => parent;
+        public virtual IList<RenderableGameComponent> Children => children;
 
         public virtual void Render(Graphics g)
         {
