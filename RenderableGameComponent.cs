@@ -7,6 +7,7 @@ namespace PongNet.Common
     {
         private RenderableGameComponent parent;
         private IList<RenderableGameComponent> children;
+        protected bool isVisible;
 
         public RenderableGameComponent()
         {
@@ -17,20 +18,19 @@ namespace PongNet.Common
         public int Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-		public bool IsVisible { get; set; }
+		public virtual bool IsVisible { get => isVisible; set => isVisible = value; }
 		public Rectangle Bounds => new Rectangle(X, Y, Width, Height);
         public virtual RenderableGameComponent Parent => parent;
         public virtual IList<RenderableGameComponent> Children => children;
 
         public virtual void Render(Graphics g)
         {
-            if (!IsVisible)
-            {
-                return;
-            }
 			foreach (var child in this)
 			{
-                child.Render(g);
+                if (child.IsVisible)
+                {
+                    child.Render(g);
+                }
 			}
 		}
 
